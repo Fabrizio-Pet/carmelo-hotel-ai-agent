@@ -1,5 +1,7 @@
 # carmelo-hotel-ai-agent
 
+# DISCLAIMER
+**THIS FILES ARE MEANT FOR PERSONAL USE. DO NOT DISCLOSE THIS FILES AS YOURS**
 # 🏨 Carmelo: Hotel's Reservation Agent
 **L'intelligenza artificiale al servizio dell'ospitalità 4.0**
 
