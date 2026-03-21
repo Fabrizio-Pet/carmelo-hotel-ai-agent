@@ -49,7 +49,7 @@ Il sistema è diviso in tre moduli logici fondamentali:
 Progetto realizzato con passione per il **Concorso "Premio Di Bartolo"** da:
 * Fabrizio Petralia (Captain)- Backend & AI Integration
 * Manuel Di Pino- Database creation
-* Martina Lo Giudice- Frontend structure
+* Martina Lo Giudice- AI Integration
 
 ---
 
