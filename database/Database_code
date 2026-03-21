@@ -1,0 +1,43 @@
+-- ============================
+-- TABELLA: camere
+-- ============================
+CREATE TABLE camere (
+    id_camera SERIAL PRIMARY KEY,
+    n_camera INT NOT NULL,
+    n_letti INT NOT NULL,
+    piano INT NOT NULL,
+    tipo_camera TEXT NOT NULL,
+    prezzo_bassa_stagione INT NOT NULL,
+    prezzo_alta_stagione INT NOT NULL,
+    capacita INT NOT NULL,
+    servizi BOOLEAN NOT NULL
+);
+
+-- ============================
+-- TABELLA: stagioni
+-- ============================
+CREATE TABLE stagioni (
+    id_stagione SERIAL PRIMARY KEY,
+    nome_stagione TEXT NOT NULL,
+    data_inizio DATE NOT NULL,
+    data_fine DATE NOT NULL,
+    descrizione TEXT
+);
+
+-- ============================
+-- TABELLA: prenotazioni
+-- ============================
+CREATE TABLE prenotazioni (
+    id_prenotazioni SERIAL PRIMARY KEY,
+    id_camera INT NOT NULL REFERENCES camere(id_camera),
+    check_in DATE NOT NULL,
+    check_out DATE NOT NULL,
+    nome TEXT NOT NULL,
+    cognome TEXT NOT NULL,
+    cf TEXT NOT NULL,
+    email TEXT NOT NULL,
+    telefono TEXT NOT NULL,
+    tipo_camera TEXT NOT NULL,
+    data_nascita DATE NOT NULL,
+    luogo_nascita TEXT NOT NULL
+);
