@@ -33,6 +33,9 @@ Il sistema è diviso in tre moduli logici fondamentali:
 2.  **Modulo Logico:** n8n interroga il database PostgreSQL per confermare che i parametri richiesti siano disponibili.
 3.  **Modulo di Scrittura:** Una volta confermato l'interesse del cliente, l'agente scrive la prenotazione nel DB e invia una conferma formale.
 
+
+   ![Descrizione Immagine](./assets/n8n-workflow-full.png)
+
 ---
 
 ## 📈 Impatto e Obiettivi
