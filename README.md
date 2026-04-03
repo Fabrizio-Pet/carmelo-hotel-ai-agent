@@ -1,57 +1,61 @@
-# carmelo-hotel-ai-agent
+# 🏨 Carmelo: AI-Powered Hotel Reservation Agent
 
-# DISCLAIMER
 **THIS FILES ARE MEANT FOR PERSONAL USE. DO NOT DISCLOSE THIS FILES AS YOURS**
-# 🏨 Carmelo: Hotel's Reservation Agent
-**L'intelligenza artificiale al servizio dell'ospitalità 4.0**
 
-Carmelo è un agente AI avanzato progettato per rivoluzionare la gestione delle prenotazioni alberghiere. Nato dalla necessità di ottimizzare il lavoro dei receptionist, Carmelo gestisce in autonomia la comunicazione con i clienti, la verifica delle disponibilità e l'inserimento delle prenotazioni nel database, garantendo risposte rapide e precise 24/7.
+**Revolutionizing Hospitality with n8n and LLM Integration**
+
+Carmelo is an advanced AI agent designed to streamline hotel booking management. Developed to reduce the administrative burden on reception staff, Carmelo autonomously handles guest inquiries, checks real-time availability, and manages database reservations 24/7 with a friendly, professional tone.
 
 ---
 
-## 🚀 Funzionalità Principali
-* **Gestione Prenotazioni Automatica:** Dialoga con l'utente per raccogliere date, numero di ospiti e preferenze.
-* **Integrazione Database:** Verifica in tempo reale la disponibilità delle camere e registra i dati su PostgreSQL.
-* **Supporto Multicanale:** Progettato per essere integrato via Chatbot (Telegram/Web) e gestire notifiche istantanee.
-* **Customer Satisfaction:** Riduce drasticamente i tempi di attesa e previene l'overbooking grazie alla sincronizzazione automatica.
+## 🏆 Awards
+* **Finalist at "Premio Salvatore Di Bartolo"** – Recognized for innovation in local business automation.
+
+---
+
+## 🚀 Key Features
+* **Automated Booking Engine:** Natural language processing to collect check-in/out dates, guest details, and preferences.
+* **Real-time Database Sync:** Direct integration with PostgreSQL to verify room availability and prevent overbooking.
+* **Smart Authentication:** Securely handles reservation modifications and cancellations by verifying guest identity.
+* **Multimodal Support:** Capable of processing both text and voice messages (STT) for a seamless user experience.
+* **Automated Room Management:** Automatically toggles room availability status upon booking or cancellation.
 
 ---
 
 ## 🛠️ Tech Stack
-Il cuore di Carmelo batte grazie a un'architettura moderna e scalabile:
-
-* **Orchestrazione:** [n8n](https://n8n.io/) (Workflow automation)
-* **Cervello AI:** OpenAI GPT-4 / LangChain (tramite nodi AI di n8n)
-* **Database:** [PostgreSQL](https://www.postgresql.org/) (Gestione inventario camere e clienti)
-* **Storage & Cloud:** Supabase / n8n.cloud
-* **Comunicazione:** Telegram API / Webhook personali
+* **Orchestration:** [n8n](https://n8n.io/) (Workflow Automation)
+* **AI Engine:** OpenAI GPT-4o / LangChain
+* **Database:** [PostgreSQL](https://www.postgresql.org/) (via Supabase)
+* **Interface:** Telegram Bot API
+* **Speech-to-Text:** OpenAI Whisper (for voice message processing)
 
 ---
 
-## 🧠 Architettura del Sistema
-Il sistema è diviso in tre moduli logici fondamentali:
-
-1.  **Modulo di Comprensione:** L'AI analizza il linguaggio naturale dell'utente (NLP) per estrarre entità (check-in, check-out, tipo camera).
-2.  **Modulo Logico:** n8n interroga il database PostgreSQL per confermare che i parametri richiesti siano disponibili.
-3.  **Modulo di Scrittura:** Una volta confermato l'interesse del cliente, l'agente scrive la prenotazione nel DB e invia una conferma formale.
-
+## 🧠 System Architecture
+The agent operates through three core logic modules:
+1. **Understanding Module:** Uses NLP to extract entities (dates, room types, guest info) from unstructured user input.
+2. **Logic & Validation:** n8n cross-checks requested dates against the PostgreSQL database and validates Italian Tax Codes (Codice Fiscale) and contact info.
+3. **Action Module:** Executes SQL commands to `INSERT`, `UPDATE`, or `DELETE` reservations and sends instant confirmation to the guest.
 
    ![Descrizione Immagine](./assets/n8n-workflow-full.png)
 
 ---
 
-## 📈 Impatto e Obiettivi
-* **Efficienza Operativa:** Riduzione del 70% del carico di lavoro manuale per le prenotazioni standard.
-* **Scalabilità:** Possibilità di gestire centinaia di richieste simultanee senza errori umani.
-* **Zero-Loss:** Nessuna richiesta viene persa, ogni lead viene gestito dal bot o passato all'operatore in caso di complessità.
+## 👥 The Team
+Developed by:
+* **Fabrizio Petralia** – Lead Developer / Backend & AI Logic
+* **Martina Lo Giudice** – UI/UX & Documentation
+* **Manuel Di Pino** – Database Design & Testing
 
 ---
 
-## 👥 Il Team
-Progetto realizzato con passione per il **Concorso "Premio Di Bartolo"** da:
-* Fabrizio Petralia (Captain)- Backend & AI Integration
-* Manuel Di Pino- Database creation
-* Martina Lo Giudice- AI Integration
+## 📁 Repository Structure
+* `workflows/`: Cleaned n8n `.json` export (ready for import).
+* `database/`: SQL schema for `Clients`, `Rooms`, and `Reservations`.
+* `assets/`: Workflow diagrams and UI screenshots.
 
+---
+
+> **Note:** This project was developed as part of a technical competition to demonstrate the power of low-code automation combined with modern LLMs.
 ---
 
